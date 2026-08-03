@@ -1,3 +1,4 @@
+from transacoes import adicionar_transacao, listar_transacoes
 
 def menu():
     print("\n=== CONTROLADOR DE FINANÇAS ===")
@@ -12,18 +13,19 @@ def iniciar():
 
         menu()
 
-        opcao = input("Escolha uma opção: ")
+        opcao = input("\nEscolha uma opção: ")
 
         if opcao == "1":
             adicionar_transacao()
 
-        if opcao == "2":
+        elif opcao == "2":
+            print("\n=== Despesas ===\n")
             listar_transacoes()
 
-        if opcao == "3":
+        elif opcao == "3":
             ver_saldo()
 
-        if opcao == "4": 
+        elif opcao == "4": 
             break
 
         else:
