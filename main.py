@@ -1,12 +1,11 @@
-from transacoes import adicionar_transacao, listar_transacoes, ver_saldo, zerar_saldo
+from transacoes import adicionar_transacao, listar_transacoes, ver_saldo
 
 def menu():
     print("\n=== CONTROLADOR DE FINANÇAS ===")
     print("1 - Adicionar transação")
     print("2 - Listar transações")
     print("3 - Ver saldo")
-    print("4 - Zerar saldo")
-    print("5 - Sair")
+    print("4 - Sair")
 
 def iniciar():
 
@@ -20,17 +19,15 @@ def iniciar():
             adicionar_transacao()
 
         elif opcao == "2":
-            print("\n=== DESPESAS ===\n")
+            print("\n=== TRANSAÇÕES ===\n")
             listar_transacoes()
 
         elif opcao == "3":
             print("\n=== SALDO ===\n")
             ver_saldo()
 
-        elif opcao == "4":
-            zerar_saldo()
-
-        elif opcao == "5": 
+        elif opcao == "4": 
+            print("\nPrograma encerrado.\n")
             break
 
         else:

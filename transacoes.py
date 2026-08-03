@@ -1,6 +1,7 @@
 transacoes = []
 
 def adicionar_transacao():
+
     descricao = input("Insira uma descrição da transação: ")
     valor = float(input("Diga o valor da transação: "))
 
@@ -14,13 +15,17 @@ def adicionar_transacao():
 def listar_transacoes(): 
 
     for transacao in transacoes:
+
         print(f"{transacao['descricao']} - R${transacao['valor']:.2f}")
 
+    if not transacoes:
+        print("Sem transações registradas.")
+
 def ver_saldo():
+
     saldo = 0
+
     for transacao in transacoes:
         saldo += transacao['valor']
-    print(f"R${saldo:.2f}")
 
-def zerar_saldo():
-    transacoes.clear()
+    print(f"R${saldo:.2f}")
