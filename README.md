@@ -1,4 +1,4 @@
-# Gerenciador de Finanças
+# Gerenciador de Financas
 
 Projeto desenvolvido em python por Lucas Encarnação Brandão em Python para controle de receitas e despesas.
 
