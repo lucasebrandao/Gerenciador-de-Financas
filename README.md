@@ -1,6 +1,6 @@
 # Gerenciador de Finanças
 
-Projeto desenvolvido em python por Lucas Encarnação Brandão em Python para controle de receitas e despesas.
+Projeto desenvolvido em Python por Lucas Encarnação Brandão para controle de receitas e despesas.
 
 ## Objetivo
 
