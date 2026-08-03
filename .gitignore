@@ -1,1 +1,4 @@
-# Ainda não entendi direito a parte do __pycache__/
+__pycache__/
+*.pyc
+venv/
+.env
