@@ -1,6 +1,14 @@
 [
     {
-        "descricao" : "Mercado",
-        "valor" : 1000
+        "descricao": "Compras no mercado",
+        "valor": 1000.0
+    },
+    {
+        "descricao": "Corrida de Uber",
+        "valor": 20.0
+    },
+    {
+        "descricao": "Corte de cabelo",
+        "valor": 40.0
     }
 ]

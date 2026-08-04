@@ -43,3 +43,12 @@ def ver_saldo(transacoes):
         saldo += transacao['valor']
 
     print(f"R${saldo:.2f}")
+
+
+def salvar_transacoes(transacoes):
+
+    arquivo = open("dados.json","w")
+
+    json.dump(transacoes, arquivo, indent=4)
+
+    arquivo.close()

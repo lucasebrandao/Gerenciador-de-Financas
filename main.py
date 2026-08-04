@@ -1,4 +1,4 @@
-from transacoes import carregar_transacoes, adicionar_transacao, listar_transacoes, ver_saldo
+from transacoes import carregar_transacoes, adicionar_transacao, listar_transacoes, ver_saldo, salvar_transacoes
 
 
 transacoes = carregar_transacoes()
@@ -21,11 +21,12 @@ def iniciar():
 
         if opcao == "1":
             adicionar_transacao(transacoes)
+            salvar_transacoes(transacoes)
 
         elif opcao == "2":
             print("\n=== TRANSAÇÕES ===\n")
             listar_transacoes(transacoes)
-
+            
         elif opcao == "3":
             print("\n=== SALDO ===\n")
             ver_saldo(transacoes)
