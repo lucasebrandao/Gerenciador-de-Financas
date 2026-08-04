@@ -1,15 +1,18 @@
 import json
 
-arquivo = "dados.json"
 
 def carregar_transacoes():
-    with open("dados.json","r") as arquivo:
 
-# CONTINUAR A IMPLEMENTAR SALVAMENTO DAS TRANSAÇÕES COM JSON.
+    arquivo = open("dados.json","r")
 
-transacoes = []
+    transacoes = json.load(arquivo)
 
-def adicionar_transacao():
+    arquivo.close()
+
+    return transacoes
+
+
+def adicionar_transacao(transacoes):
 
     descricao = input("Insira uma descrição da transação: ")
     valor = float(input("Diga o valor da transação: "))
@@ -21,7 +24,8 @@ def adicionar_transacao():
 
     transacoes.append(transacao)
 
-def listar_transacoes(): 
+
+def listar_transacoes(transacoes): 
 
     for transacao in transacoes:
 
@@ -30,7 +34,8 @@ def listar_transacoes():
     if not transacoes:
         print("Sem transações registradas.")
 
-def ver_saldo():
+
+def ver_saldo(transacoes):
 
     saldo = 0
 
