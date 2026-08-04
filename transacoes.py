@@ -1,3 +1,12 @@
+import json
+
+arquivo = "dados.json"
+
+def carregar_transacoes():
+    with open("dados.json","r") as arquivo:
+
+# CONTINUAR A IMPLEMENTAR SALVAMENTO DAS TRANSAÇÕES COM JSON.
+
 transacoes = []
 
 def adicionar_transacao():
