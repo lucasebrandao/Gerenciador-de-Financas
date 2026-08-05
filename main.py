@@ -45,6 +45,7 @@ def iniciar():
 
             excluir_transacao(transacoes)
 
+            salvar_transacoes(transacoes)
 
         elif opcao == "5": 
 

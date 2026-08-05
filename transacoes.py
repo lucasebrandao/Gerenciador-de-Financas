@@ -26,7 +26,7 @@ def adicionar_transacao(transacoes):
     if opcao == "1":
         tipo = 'Receita'
 
-    if opcao == "2":
+    elif opcao == "2":
         tipo = 'Despesa'
     
     transacao = {
@@ -40,14 +40,17 @@ def adicionar_transacao(transacoes):
 
 def listar_transacoes(transacoes): 
 
+    if not transacoes:
+
+        print("Sem transações registradas.")
+
+        return
+    
     for transacao in transacoes:
 
         print(f"{transacao['descricao']} - R${transacao['valor']:.2f} - {transacao['tipo']}")
 
-    if not transacoes:
-        print("Sem transações registradas.")
-
-
+  
 def ver_saldo(transacoes):
 
     saldo = 0
@@ -57,7 +60,7 @@ def ver_saldo(transacoes):
         if transacao['tipo'] == 'Receita':
             saldo += transacao['valor']
 
-        if transacao['tipo'] == 'Despesa':   
+        elif transacao['tipo'] == 'Despesa':   
             saldo -= transacao['valor']
 
     print(f"R${saldo:.2f}")
@@ -69,14 +72,20 @@ def excluir_transacao(transacoes):
 
         print("Nenhuma transação foi registrada.")
 
+        return
+        
     for indice, transacao in enumerate(transacoes):
 
         print(f"\n{indice + 1}) {transacao['descricao']} - R${transacao['valor']:.2f} - {transacao['tipo']}")
 
     opcao = int(input("\n\nDigite o índice da transação que deseja excluir: "))
-    opcao -= 1
+
+    if opcao < 1 or opcao > len(transacoes):
+        print("Transação inválida.")
+
+        return
     
-    del transacoes[opcao]
+    del transacoes[opcao - 1]
     
 
 def salvar_transacoes(transacoes):
