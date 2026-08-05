@@ -63,6 +63,22 @@ def ver_saldo(transacoes):
     print(f"R${saldo:.2f}")
 
 
+def excluir_transacao(transacoes):
+
+    if not transacoes:
+
+        print("Nenhuma transação foi registrada.")
+
+    for indice, transacao in enumerate(transacoes):
+
+        print(f"\n{indice + 1}) {transacao['descricao']} - R${transacao['valor']:.2f} - {transacao['tipo']}")
+
+    opcao = int(input("\n\nDigite o índice da transação que deseja excluir: "))
+    opcao -= 1
+    
+    del transacoes[opcao]
+    
+
 def salvar_transacoes(transacoes):
 
     arquivo = open("dados.json","w")
