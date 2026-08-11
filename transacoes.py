@@ -50,7 +50,14 @@ def listar_transacoes(transacoes):
 
         print(f"{transacao['descricao']} - R${transacao['valor']:.2f} - {transacao['tipo']}")
 
-  
+
+def ver_relatorio(transacoes):
+
+    for transacao in transacoes:
+
+        print(f"")
+
+
 def ver_saldo(transacoes):
 
     saldo = 0
