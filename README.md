@@ -38,7 +38,7 @@ Gerenciador-de-Financas/
 1. Clone este repositório:
 
 ```bash
-git clone link-do-repositorio
+git clone https://github.com/lucasebrandao/Gerenciador-de-Financas
 ```
 
 2. Acesse a pasta do projeto:
