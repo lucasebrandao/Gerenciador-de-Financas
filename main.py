@@ -1,7 +1,12 @@
-from transacoes import carregar_transacoes, adicionar_transacao, listar_transacoes, ver_saldo, salvar_transacoes, excluir_transacao, ver_relatorio
-
-
-transacoes = carregar_transacoes()
+from transacoes import (
+    adicionar_transacao,
+    carregar_transacoes,
+    excluir_transacao,
+    listar_transacoes,
+    salvar_transacoes,
+    ver_relatorio,
+    ver_saldo,
+)
 
 
 def menu():
@@ -15,49 +20,33 @@ def menu():
 
 
 def iniciar():
+    transacoes = carregar_transacoes()
 
     while True:
-
         menu()
-
         opcao = input("\nEscolha uma opção: ")
 
         if opcao == "1":
-
-            adicionar_transacao(transacoes)
-            salvar_transacoes(transacoes)
-
+            if adicionar_transacao(transacoes):
+                salvar_transacoes(transacoes)
         elif opcao == "2":
-
             print("\n=== TRANSAÇÕES ===\n")
-
             listar_transacoes(transacoes)
-
         elif opcao == "3":
-
             print("\n=== RELATÓRIO ===\n")
-
             ver_relatorio(transacoes)
-
         elif opcao == "4":
-
             print("\n=== SALDO ===\n")
-
             ver_saldo(transacoes)
-
         elif opcao == "5":
-
-            excluir_transacao(transacoes)
-            salvar_transacoes(transacoes) 
-
+            if excluir_transacao(transacoes):
+                salvar_transacoes(transacoes)
         elif opcao == "6":
-
             print("\nPrograma encerrado.\n")
-
             break
-
         else:
             print("Opção inválida.")
 
 
-iniciar()
+if __name__ == "__main__":
+    iniciar()
